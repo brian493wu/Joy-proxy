@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Title with zero-width non-joiner to obfuscate keywords -->
-    <title>Emer&zwnj;ald Pro&zwnj;xy</title>
+    <!-- Title -->
+    <title>Home</title>
     
     <!-- Favicon -->
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -18,72 +18,90 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/styles.css">
 
-    <!-- Background Image Styling -->
+    <!-- Background and Alignment Styles -->
     <style>
+        /* Background styling */
         body {
             background-image: url('https://images.unsplash.com/photo-1514306191717-452ec28c7814?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlYXRyZSUyMHN0YWdlfGVufDB8fDB8fHww');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            color: white; /* Ensures text is visible */
+            color: white;
+            display: flex;
+            justify-content: flex-start; /* Align content to the left */
+            align-items: center;
+            height: 100vh;
+            padding-left: 50px; /* Adjust left padding */
+            text-align: left;
         }
 
-        h1, p, input, button {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Improves readability */
+        /* Container styling */
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .url {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            border: 2px solid black;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #footl {
+            margin-top: 15px;
         }
 
         #popup {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better visibility */
+            background: rgba(0, 0, 0, 0.7);
             padding: 15px;
             border-radius: 8px;
         }
     </style>
 </head>
-<body id="body">
-    
-    <!-- Display Frame -->
-    <iframe id="frame" style="display: block; visibility: hidden;"></iframe> 
-    
-    <!-- Settings Button -->
-    <div id="settings">
-        <button onclick="openTab()"> 
-            <img alt="Settings" src="/assets/img/settings.png" id="settingsbtn">
-        </button>
-    </div>
+<body>
 
-    <!-- Main Content -->
-    <div>
-        <h1><span class="black_text">Em&zwnj;erald Pro&zwnj;xy</span></h1>
+    <div class="container">
+        <h1>Joy&zwnj; Unblocker&zwnj;</h1>
         <form class="url" method="POST">
-            <input 
-                style="border: 2px solid black; border-radius: 4px;" 
-                name="url" 
-                id="iurl" 
-                autocomplete="off" 
-                placeholder="Browse the web" 
-                type="text">
+            <input name="url" id="iurl" autocomplete="off" placeholder="Browse the web" type="text">
             <button class="btn" type="submit" id="alloydefault">G&zwnj;o!</button>
         </form>
-    </div>
-
-    <!-- Footer -->
-    <div id="footl">
-        <p>
-            <a href="https://discord.gg/DctXzJsQrS">Discord</a> | 
-            <a href="https://github.com/frog22222/emerald">GitHub</a>
-        </p>
-    </div>
-
-    <!-- Tab Cloaking Popup -->
-    <div id="popup">
-        <div>
-            <input id="title" placeholder="Enter a title">
-            <button onclick="setTitle()">Set</button>
-        </div>
-        <div>  
-            <input id="icon" placeholder="Enter a favicon URL">
-            <button onclick="setIcon()">Set</button>
+        <div id="footl">
+            <p>
+                <a href="https://discord.com/invite/upuM9GXAay" style="color: white;">Discord</a>
+            </p>
         </div>
     </div>
 
