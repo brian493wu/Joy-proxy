@@ -1,148 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title -->
-    <title>Emer&zwnj;ald Pro&zwnj;xy</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/img/favicon.ico">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-    <!-- Background and Text Styling -->
-    <style>
-        /* Background styling */
-        body {
-            background-image: url('https://images.unsplash.com/photo-1514306191717-452ec28c7814?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlYXRyZSUyMHN0YWdlfGVufDB8fDB8fHww');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: white; /* Ensures all text is white */
-        }
-
-        /* Universal text styling */
-        h1, p, a, input, button, label, span {
-            color: white !important; /* Forces all text elements to be white */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Enhances readability */
-        }
-
-        /* Styling for the input field */
-        input {
-            border: 2px solid white;
-            border-radius: 4px;
-            padding: 10px;
-            width: 250px;
-            font-size: 16px;
-            background: transparent;
-            color: white;
-        }
-
-        input::placeholder {
-            color: rgba(255, 255, 255, 0.7); /* Makes the placeholder text slightly faded */
-        }
-
-        /* Button styling */
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        /* Footer text color */
-        #footl a {
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Popup background */
-        #popup {
-            background: ;
-            padding: px;
-            border-radius: px;
-        }
-
-        /* Remove shadow from popup text */
-        #popup input,
-        #popup button {
-            text-shadow: none;
-        }
-
-    </style>
-</head>
-<body>
-
-    <!-- Display Frame -->
-    <iframe id="frame" style="display: block; visibility: hidden;"></iframe> 
-    
-    <!-- Settings Button -->
-    <div id="settings">
-        <button onclick="openTab()"> 
-            <img alt="Settings" src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" id="settingsbtn">
-        </button>
+<html lang="en"><head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Important: Use &zwnj; to mess with keywords.  -->
+      <title>Home</title>
+      <link rel="icon">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="/assets/css/styles.css"></head>
+  <body id="body">
+   
+   
+   <!--Display Frame-->
+   <iframe id="frame" style="display:block; visibility: hidden;"></iframe> 
+  <div id="settings">
+  <button onclick="openTab()"> 
+    <img alt="settings" src="https://static-00.iconduck.com/assets.00/settings-icon-1024x1022-x2c1qvd9.png" id="settingsbtn">
+  </button>
+  </div>
+  
+  <div>
+      <h1> <span class="black_text">Joy&zwnj; &zwnj;Unblocker</span> </h1>
+      <form class="url" method="POST" "="">
+         <input style="border: 2px solid black;
+  border-radius: 4px;" name="url" id="iurl" autocomplete="off" placeholder="Browse the web" type="text">
+        <button class="btn" type="submit" id="alloydefault">G&zwnj;o!</button>
+      </form>
+   </div>
+  
+   <div id="footl">
+      <p>
+        <a href="https://discord.com/invite/upuM9GXAay">Discord</a>
+   </div>
+  
+  <!--Tab Cloaking-->
+<div id="popup">
+  
+  <div>
+  <input id="title" placeholder="Enter a title">
+    <button onclick="setTitle()">Set</button>
+  </div>
+  <div>  
+    <input id="icon" placeholder="Enter a favicon URL">
+      <button onclick="setIcon()">Set</button>
     </div>
-
-    <!-- Main Content -->
-    <div>
-        <h1>Em&zwnj;erald Pro&zwnj;xy</h1>
-        <form class="url" method="POST">
-            <input 
-                name="url" 
-                id="iurl" 
-                autocomplete="off" 
-                placeholder="Browse the web" 
-                type="text">
-            <button class="btn" type="submit" id="alloydefault">G&zwnj;o!</button>
-        </form>
-    </div>
-
-    <!-- Footer -->
-    <div id="footl">
-        <p>
-            <a href="https://discord.com/invite/upuM9GXAay">Discord</a> | 
-        </p>
-    </div>
-
-    <!-- Tab Cloaking Popup -->
-    <div id="popup">
-        <div>
-            <input id="title" placeholder="Enter a title">
-            <button onclick="setTitle()">Set</button>
-        </div>
-        <div>  
-            <input id="icon" placeholder="Enter a favicon URL">
-            <button onclick="setIcon()">Set</button>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
+   <!--Scripts-->
     <script>
-        function openTab() {
-            var popup = document.getElementById("popup");
-            popup.classList.toggle("open");
-        }
+      function openTab() {
+      var popup = document.getElementById("popup")
+      popup.classList.toggle("open")
+      }  
     </script>
-    <script src="/assets/js/surf.js"></script>
-    <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/theme.js"></script>
-
-</body>
-</html>
+      <script src="/assets/js/surf.js">
+    </script>
+      <script src="/assets/js/index.js">
+    </script>
+  <script src="/assets/js/theme.js">
+    </script>
+   
+</div></body></html>
